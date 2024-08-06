@@ -5,6 +5,10 @@ on:
   #   - cron: '0 */24 * * *'
   workflow_dispatch:
 
+env:
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+  
 jobs:
   run-code:
     runs-on: ubuntu-latest
